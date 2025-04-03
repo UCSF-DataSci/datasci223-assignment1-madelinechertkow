@@ -66,8 +66,8 @@ def main():
     except SystemExit:
         print("Error: You must enter the email you want to hash after the command!")
         sys.exit(1)
-    hashe = hash_email(email)
-    write_hash_to_file(hashe)
+    hash = hash_email(email)
+    write_hash_to_file(hash)
     # TODO: Implement this function
     # 1. Check if an email address was provided as a command line argument
     # 2. If not, print an error message and exit with a non-zero status
