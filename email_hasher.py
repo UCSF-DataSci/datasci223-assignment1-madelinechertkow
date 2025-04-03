@@ -63,11 +63,13 @@ def main():
     try:
         args = parser.parse_args()
         email = args.email
+        print(email)
     except SystemExit:
         print("Error: You must enter the email you want to hash after the command!")
         sys.exit(1)
     hash = hash_email(email)
     hashfile = write_hash_to_file(hash)
+    sys.stdout.write(str(hash))
     
     # TODO: Implement this function
     # 1. Check if an email address was provided as a command line argument
@@ -78,4 +80,4 @@ def main():
 
 if __name__ == "__main__":
     main()
-    sys.stout(hash)
+    
