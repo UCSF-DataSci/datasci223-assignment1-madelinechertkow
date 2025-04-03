@@ -32,7 +32,7 @@ def hash_email(email):
     Returns:
         str: The SHA-256 hash of the email in hexadecimal format
     """
-    email_hash = hashlib.sha256(email.encode())#.hexdigest()
+    email_hash = hashlib.sha256(email.encode()).hexdigest()
     # TODO: Implement this function
     # 1. Convert the email string to bytes
     # 2. Create a SHA-256 hash of the email
@@ -67,7 +67,8 @@ def main():
         print("Error: You must enter the email you want to hash after the command!")
         sys.exit(1)
     hash = hash_email(email)
-    write_hash_to_file(hash)
+    hashfile = write_hash_to_file(hash)
+    return hashfile
     # TODO: Implement this function
     # 1. Check if an email address was provided as a command line argument
     # 2. If not, print an error message and exit with a non-zero status
