@@ -69,7 +69,7 @@ def main():
         sys.exit(1)
     hash = hash_email(email)
     hashfile = write_hash_to_file(hash)
-    sys.stdout.write(str(hash))
+    sys.stdout.write(str(hashfile))
     
     # TODO: Implement this function
     # 1. Check if an email address was provided as a command line argument
